@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel's Navigation</title>
+  <style>
+    :root {
+      --bg: #fff0f5;
+      --text: #4b2e2e;
+      --accent: #c2185b;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Horizontal Menu */
+    .nav-horizontal {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #fce4ec;
+      padding: 0.8rem 1rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    .nav-horizontal a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+    }
+    .nav-horizontal a:hover {
+      background: #ffd9e6;
+    }
+
+    /* Vertical Sidebar */
+    .sidebar {
+      width: 220px;
+      min-height: 100vh;
+      background: #fce4ec;
+      border-right: 2px solid var(--accent);
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .sidebar h3 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+      margin-bottom: 0.4rem;
+    }
+    .sidebar a:hover {
+      background: #ffd9e6;
+    }
+
+    /* Content area */
+    .content {
+      margin-left: 240px;
+      padding: 2rem;
+    }
+
+    /* Responsive: show horizontal on small screens */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+    @media (min-width: 769px) {
+      .nav-horizontal {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Horizontal Navigation (mobile) -->
+  <nav class="nav-horizontal">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Vertical Sidebar (desktop) -->
+  <aside class="sidebar">
+    <h3>Navigation</h3>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+  <!-- Page Content -->
+  <main class="content">
+    <h1>Welcome Angel 🌸</h1>
+    <p>This is the unified layout with horizontal and vertical navigation! (It changes depending on the device). 
+Due to the lack of Instruction and Study materials of the said project, I dont know the Burgery code....</p>
+  </main>
+
+</body>
+</html>
